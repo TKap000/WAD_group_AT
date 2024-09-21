@@ -11,12 +11,24 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-item"> Home</a>
-            <a href="addPost.html" class="nav-item"> addPost</a>
-        </nav>
+            <ul>
+                <li><a href="index.html" class="nav-item"> Home |</a></li>
+                <li><a href="addPost.html" class="nav-item"> addPost</a></li>
+            </ul>
     </header>
 
     <main>
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <ul>
+                    <li>Post 1</li>
+                    <li>Post 2</li>
+                    <li>Post 3</li>
+                    <li>Post 4</li>
+                    <li>Post 5</li>
+                </ul>
+            </aside>
+
         <section class="post-container">
 
             <article class="post">
@@ -27,7 +39,24 @@
 
             </article>
 
+
+            <article class="post">
+                <p class="post-date"> Oct 2, 2022</p>
+                <!--tuleb leida pilt-->
+                <p class="post-text">Anyone knows in which rom is the lab today?</p>
+                <button class="like-btn">👍</button>
         </section>
+
+        <aside class="sidebar-right">
+            <ul>
+                <li>Post 1</li>
+                <li>Post 2</li>
+                <li>Post 3</li>
+                <li>Post 4</li>
+                <li>Post 5</li>
+            </ul>
+        </aside>
+        </div>
     </main>
 
     <footer>
