@@ -16,6 +16,10 @@ li {
     display: inline;
 } 
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 header {
     background-color: #333;
@@ -34,6 +38,18 @@ nav a {
 nav a:hover {
     background-color: #f0f0f0;
     color: #333;
+}
+
+.user-icon-header {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.user-icon-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
 
 .content-wrapper {
@@ -68,8 +84,23 @@ nav a:hover {
 
 .post-date {
     color: #999;
-    font-size: 0.8em;
+    font-size: 10px;
 }
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-icon-post {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
 
 .like-button {
     background-color: #333;
@@ -100,7 +131,7 @@ footer {
     }
 
     .sidebar-left, .sidebar-right {
-        width: 90%;
+        display: none;
     }
     .post-container {
         flex-direction: row;
