@@ -12,30 +12,30 @@ ul {
     padding: 0;
 }
  
-li {
-    display: inline;
-} 
-
 img {
     max-width: 100%;
     height: auto;
 }
 
-header {
-    background-color: #333;
+.header {
+    background-color: #9f9393;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px;
     border-radius: 10px;
 }
 
-nav a {
-    color: #333;
-    padding: 10px 0;
-    text-decoration: none;
+.nav {
+    margin-top: 10px;
 }
 
-nav a:hover {
+.nav a {
+    color: #907676;
+    padding: 10px 10px;
+    text-align: center;
+    display: block;
+}
+
+.nav a:hover {
     background-color: #f0f0f0;
     color: #333;
 }
