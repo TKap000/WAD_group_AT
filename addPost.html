@@ -24,7 +24,8 @@
             <div class="post-form">
                 <textarea id="post-content" name="post-content" placeholder="Enter something"></textarea><br><br>
                 <input type="file" id="post-file" name="post-file"><br><br>
-                <button type="submit" class="create-post-btn">Submit</button>
+                <!-- post 2, made with function -->
+                <button type="button" class="create-post-btn" onclick="check_submission()">Submit</button>
             </div>
         </section>
     </main>
@@ -32,6 +33,18 @@
     <footer>
         <p>Footer</p>
     </footer>
+    <!-- post 2 javascript to go to homepage -->
+    <script>
+        function check_submission() {
+            var post_field = document.getElementById("post-content").value.trim();
+            var post_file = document.getElementById("post-file").files.length;
+            if (post_field || post_file > 0) {
+                window.location.href = 'index.html';
+            } else {
+                alert("You must enter something or upload a file to submit a post");
+            }
+        }
+    </script>
 </body>
 
 </html>
