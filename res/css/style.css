@@ -141,6 +141,14 @@ footer {
     
 }
 /* commit 3 add post styling, could be cooler.  */
+
+.post-form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 30vh;           
+}
+
 .post-form {
     background-color: #65636f;
     padding: 20px;
@@ -148,6 +156,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 300px;
+    justify-content: center;
 }
 
 #post-content {
