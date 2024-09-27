@@ -119,11 +119,6 @@ footer {
 }
 
 
-
-
-
-
-
 @media (max-width: 700px) {
 
     .content-wrapper {
@@ -143,4 +138,37 @@ footer {
         width: 90%;
     }
     
+}
+/* commit 3 add post styling, could be cooler.  */
+.post-form {
+    background-color: #65636f;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#post-content {
+    width: 90%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.create-post-btn {
+    background-color: #f30202;
+    color: white;
+    padding: 41px 82px;
+    align-self: center;
+}
+
+.create-post-btn:hover {
+    background-color: #05ed3f;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
