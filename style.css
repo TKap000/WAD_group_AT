@@ -172,3 +172,61 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+
+/* Login */
+
+.login-form {
+    background-color: #beb7e2;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    text-align: center;
+    align-content: center;
+}
+
+.login-form a{
+    color: #2672e4;
+}
+
+.login-info{
+    overflow:unset;
+    align-self: center;
+    width: 60%;
+    height: 20px;
+    border: 1px solid #b9d0f3;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+.login-btn {
+    width: 30%;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #05abed;
+    align-content: center;
+    align-self: center;
+}
+
+.login-btn:hover {
+    background-color: #08f3cc;
+}
+
+.nav-login {
+    margin-top: 10px;
+}
+
+.nav-login a {
+    color: #080707;
+    padding: 10px 10px;
+    text-align: center;
+    display: block;
+}
+
+.nav-login a:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}

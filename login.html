@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <header class="header">
-        <ul class="nav">
-            <li><a href="index.html" class="nav-item"> Home</a></li>
-            <li><a href="addPost.html" class="nav-item"> addPost</a></li>
+        <ul class="nav-login">
+            <li><a href="login.html" class="nav-item"> Login</a></li>
         </ul>
         <div class="user-icon-header">
             <img src="res/images/me.png" alt="user-icon">
@@ -20,12 +20,36 @@
 </header>
 
     <main>
-        <p>Loo lehe sisu!!!!!!</p>
+        <div class="content-wrapper">
+            <section class="login-form">
+                <p>
+                    <strong>Welcome to PostIt</strong><br><br>
+                    <p>Please log in <br> or <br><a href="login.html" class="text-blue"> Create an account</a></p>
+                    
+                    <input id="login-user" class="login-info" placeholder="Username"></input><br>
+                    <input id="login-pw" class="login-info" placeholder="Password"></input><br><br>
+
+                    <button type="button" class="login-btn" onclick="validate_login()">Log in</button>
+
+                    <p><a href="login.html" class="text-blue"> Forgot password?</a></p>
+                </p>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <p>Footer</p>
+    <footer hidden>
+        
     </footer>
 </body>
-
+<script>
+    function validate_login() {
+        var un_len = document.getElementById("login-user").value.length;
+        var pw_len = document.getElementById("login-pw").value.length;
+        if (un_len > 0 && pw_len > 0) {
+            window.location.href = 'index.html';
+        } else {
+            alert("You need to fill in a username and password.");
+        }
+    }
+</script>
 </html>
