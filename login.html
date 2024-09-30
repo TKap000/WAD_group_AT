@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!--
     <header class="header">
         <ul class="nav-login">
             <li><a href="login.html" class="nav-item"> Login</a></li>
@@ -17,28 +18,38 @@
         <div class="user-icon-header">
             <img src="res/images/me.png" alt="user-icon">
         </div>
-</header>
+    </header>
+    -->
+    <header class="header">
+        <ul class="nav">
+            <li><a href="index.html" class="nav-item"> Home</a></li>
+            <li><a href="addPost.html" class="nav-item"> addPost</a></li>
+        </ul>
+        <div class="user-icon-header">
+            <a href="login.html"><img src="res/images/me.png" alt="user-icon" class="user-icon-post"></a>
+        </div>
+    </header>
 
     <main>
         <div class="content-wrapper">
             <section class="login-form">
                 <p>
                     <strong>Welcome to PostIt</strong><br><br>
-                    <p>Please log in <br> or <br><a href="login.html" class="text-blue"> Create an account</a></p>
-                    
-                    <input id="login-user" class="login-info" placeholder="Username"></input><br>
-                    <input id="login-pw" class="login-info" placeholder="Password"></input><br><br>
+                <p>Please log in <br> or <br><a href="login.html" class="text-blue"> Create an account</a></p>
 
-                    <button type="button" class="login-btn" onclick="validate_login()">Log in</button>
+                <input id="login-user" class="login-info" placeholder="Username"></input><br>
+                <input id="login-pw" class="login-info" placeholder="Password"></input><br><br>
 
-                    <p><a href="login.html" class="text-blue"> Forgot password?</a></p>
+                <button type="button" class="login-btn" onclick="validate_login()">Log in</button>
+
+                <p><a href="login.html" class="text-blue"> Forgot password?</a></p>
                 </p>
             </section>
         </div>
     </main>
 
     <footer hidden>
-        
+
     </footer>
 </body>
 <script>
@@ -52,4 +63,5 @@
         }
     }
 </script>
+
 </html>

@@ -12,7 +12,7 @@ ul {
     margin: 0;
     padding: 0;
 }
- 
+
 img {
     max-width: 100%;
     height: auto;
@@ -59,7 +59,8 @@ img {
     padding: 20px;
 }
 
-.sidebar-left, .sidebar-right {
+.sidebar-left,
+.sidebar-right {
     background-color: #ba5a5a;
     padding: 20px;
     width: 50%;
@@ -126,9 +127,11 @@ footer {
         flex-direction: column;
     }
 
-    .sidebar-left, .sidebar-right {
+    .sidebar-left,
+    .sidebar-right {
         display: none;
     }
+
     .post-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -138,15 +141,16 @@ footer {
     .post {
         width: 90%;
     }
-    
+
 }
+
 /* commit 3 add post styling, could be cooler.  */
 
 .post-form-container {
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    height: 30vh;           
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
 }
 
 .post-form {
@@ -198,12 +202,12 @@ footer {
     align-content: center;
 }
 
-.login-form a{
+.login-form a {
     color: #2672e4;
 }
 
-.login-info{
-    overflow:unset;
+.login-info {
+    overflow: unset;
     align-self: center;
     width: 60%;
     height: 20px;
