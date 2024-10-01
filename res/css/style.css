@@ -18,6 +18,10 @@ img {
     height: auto;
 }
 
+img ~ p{
+    color: rgb(37, 4, 30);
+}
+
 .header {
     background-color: #9f9393;
     color: #fff;
@@ -30,7 +34,7 @@ img {
 }
 
 .nav a {
-    color: #907676;
+    color: #3a2e2e;
     padding: 10px 10px;
     text-align: center;
     display: block;
@@ -102,14 +106,20 @@ img {
     margin-right: 10px;
 }
 
-
-
 .like-button {
     background-color: #333;
     border: none;
     color: #fff;
     cursor: pointer;
     padding: 5px 10px;
+}
+
+/*adj child*/
+.post-text + button{
+    background-color: #467e31;
+    margin: 5px;
+    border-radius: 3px;
+    align-content: center;
 }
 
 footer {
@@ -120,7 +130,7 @@ footer {
     border-radius: 10px;
 }
 
-
+/*screen adjust*/
 @media (max-width: 700px) {
 
     .content-wrapper {
@@ -147,10 +157,10 @@ footer {
 /* commit 3 add post styling, could be cooler.  */
 
 .post-form-container {
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
 }
 
 .post-form {
@@ -159,15 +169,20 @@ footer {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 360px;
     justify-content: center;
+    align-self: center;
 }
 
+/*id selector*/
 #post-content {
+    overflow: unset;
     width: 90%;
     height: 50px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize: none;
+
 }
 
 .create-post-btn {
@@ -175,22 +190,17 @@ footer {
     color: white;
     padding: 41px 82px;
     align-self: center;
+    border-radius: 4px;
 }
 
 .create-post-btn:hover {
     background-color: #05ed3f;
 }
 
-/* removed this */
-/* .content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
+/* Login  Page*/
 
-/* Login */
-
+/*class selector*/
 .login-form {
     background-color: #beb7e2;
     padding: 20px;
@@ -202,11 +212,12 @@ footer {
     align-content: center;
 }
 
+/* descendant selector*/
 .login-form a {
     color: #2672e4;
 }
 
-.login-info {
+/* .login-info {
     overflow: unset;
     align-self: center;
     width: 60%;
@@ -215,7 +226,8 @@ footer {
     border-radius: 4px;
     font-size: 16px;
     resize: none;
-}
+} */
+
 
 .login-btn {
     width: 30%;
@@ -241,7 +253,31 @@ footer {
     display: block;
 }
 
+/* descendant mouse-over selector*/
 .nav-login a:hover {
     background-color: #f0f0f0;
     color: #333;
+}
+
+.login-content-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form > input{
+    overflow: unset;
+    align-self: center;
+    width: 60%;
+    height: 20px;
+    border: 1px solid #b9d0f3;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+/* descendant pseudo element selector */
+.login-form p::first-line{
+    color: #1f13a7;
 }
