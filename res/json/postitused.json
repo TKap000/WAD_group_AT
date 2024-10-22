@@ -1,0 +1,222 @@
+[
+    {
+        "postID": 1,
+        "author": "Nimi_1",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 2,
+        "author": "Nimi_2",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 3,
+        "author": "Nimi_3",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 4,
+        "author": "Nimi_4",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 5,
+        "author": "Nimi_5",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    }, 
+
+    {
+        "postID": 6,
+        "author": "Nimi_6",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 7,
+        "author": "Nimi_7",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 8,
+        "author": "Nimi_8",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    },
+
+    {
+        "postID": 9,
+        "author": "Nimi_9",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    }, 
+
+    {
+        "postID": 10,
+        "author": "Nimi_10",
+        "created": "2021-03-01T12:00:00",
+        "content": "Tartu 2022",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Nimi_2",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "Nimi_3",
+                "created": "2021-03-01T12:02:00",
+                "content": "Tartu 2022 on hea mõte!"
+            }
+        ]
+    }
+
+]
