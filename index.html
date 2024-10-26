@@ -14,8 +14,18 @@
             <li><a href="index.html" class="nav-item"> Home</a></li>
             <li><a href="addPost.html" class="nav-item"> addPost</a></li>
         </ul>
+        <!--
         <div class="user-icon-header">
             <a href="login.html"><img src="res/images/me.png" alt="user-icon" class="user-icon-post"></a>
+        </div>
+        -->
+        <div class="user-icon-header" onclick="toggleDropdown()">
+            <img src="res/images/me.png" alt="user-icon" class="user-icon-post-drop">
+            <div class="dropdown-content" id="userDropdown">
+                <p>John Doe</p>
+                <p>john.doe@ut.ee</p>
+                <a href="login.html">Logout</a>
+            </div>
         </div>
     </header>
 
@@ -108,6 +118,8 @@
     <footer>
         <p>Footer</p>
     </footer>
+
+    <script src="res/js/script.js"></script>
 </body>
 
 </html>

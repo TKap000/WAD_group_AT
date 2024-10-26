@@ -45,6 +45,8 @@ img ~ p{
     color: #333;
 }
 
+/* user icon and dropdown styling */
+
 .user-icon-header {
     position: absolute;
     top: 5px;
@@ -56,6 +58,40 @@ img ~ p{
     height: 30px;
     border-radius: 50%;
 }
+
+.user-icon-post-drop {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown-content p {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
 
 .content-wrapper {
     display: flex;
