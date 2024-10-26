@@ -4,6 +4,7 @@
         "author": "Nimi_1",
         "created": "2021-03-01T12:00:00",
         "content": "Tartu 2022",
+        "img":"../images/pilt1.jpg",
         "likes": 5,
         "comments": [
             {
@@ -111,22 +112,22 @@
 
     {
         "postID": 6,
-        "author": "Nimi_6",
+        "author": "Nimi_6_Validator",
         "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "content": "I validate json! https://jsonlint.com/",
         "likes": 5,
         "comments": [
             {
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Good!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Well done!"
             }
         ]
     },
