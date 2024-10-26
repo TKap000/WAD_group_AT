@@ -65,9 +65,9 @@ function populatePosts() {
         const postTextElement = document.createElement("p");
         postTextElement.textContent = data.created;
 
-        // HELP?
         const postLikeElement = document.createElement("button");
         postLikeElement.className("like-btn");
+        postLikeElement.textContent = "👍";
 
         postHeaderElement.appendChild(userIconElement);
         postHeaderElement.appendChild(dateElement);
