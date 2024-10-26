@@ -24,49 +24,55 @@ window.onclick = function(event) {
 // TASK 3
 // READ HERE: https://jsonbin.io/api-reference
 let req = new XMLHttpRequest();
-var data;
+req.responseType = 'json';
 
 req.onreadystatechange = () => {
     // if done recieving:
   if (req.readyState == XMLHttpRequest.DONE) {
-    console.log(req.responseText);
-    data = req.data;
-    populatePosts();
+    populatePosts(req.response);
   }
 };
 
 req.open("GET", "https://api.jsonbin.io/v3/b/671d1b05e41b4d34e44932b2/latest", true);
 req.setRequestHeader("X-Master-Key", "$2a$10$oZq1VTb9o0etGF.YjwqYK.jxJnRYiA0Q1pPvSBpRi3txVzVSTAKGe");
+req.onload = function(e) {
+    if (this.status == 200) {
+      console.log('response', this.response); // JSON response 
+    }
+  };
 req.send();
 
 // TASK 4
 // JSON data displayer from URI (uniform resource identifier)
-function populatePosts() {
+function populatePosts(data) {
 
             
     const dataDisplay = document.getElementById("jsonDataDisplay");
     // HELP here: https://stackoverflow.com/questions/34907982/looping-through-json-data-to-generate-html
     // loop by object in data
     for(var post in data){
+
+        console.log(data.length);
+
         const postElement = document.createElement("article");
-        dataDisplay.className("post"); // for style
+        postElement.className = "post"; // for style
 
         const postHeaderElement = document.createElement("div");
 
         const userIconElement = document.createElement("a");
-        userIconElement.className("user-icon-post");
+        userIconElement.className = "user-icon-post";
 
         const dateElement = document.createElement("p");
-        dateElement.textContent = data.created;
+        dateElement.textContent = post.created;
 
         const postImgElement = document.createElement("img");
-        postImgElement.setAttribute("src", data.img)
+        //postImgElement.setAttribute("src", post.img) // wrong path in file, needs to be this file relative #ofcource-it-is
 
         const postTextElement = document.createElement("p");
-        postTextElement.textContent = data.created;
+        postTextElement.textContent = post.created;
 
         const postLikeElement = document.createElement("button");
-        postLikeElement.className("like-btn");
+        postLikeElement.className = "like-btn";
         postLikeElement.textContent = "👍";
 
         postHeaderElement.appendChild(userIconElement);
@@ -87,8 +93,9 @@ function populatePosts() {
      
 }
 
-
-// TASK 5
+/*
+// TASK 5, uncomment when ... yea
+// this is working example (or would be, structurally)
 // JSON data displayer from local source
 document.addEventListener("DOMContentLoaded", function () {
     fetch('../../res/json/postitused.json')
@@ -97,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             const dataDisplay = document.getElementById("jsonDataDisplay");
             // HELP here: https://stackoverflow.com/questions/34907982/looping-through-json-data-to-generate-html
-            /*
+            
             // Create HTML elements to display the JSON data
             const nameElement = document.createElement("p");
             nameElement.textContent = "Name: " + data.name;
@@ -112,7 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Append the elements to the "dataDisplay" div
             dataDisplay.appendChild(nameElement);
             dataDisplay.appendChild(ageElement);
-            dataDisplay.appendChild(cityElement); */
+            dataDisplay.appendChild(cityElement); 
         })
         .catch(error => console.error("Error fetching JSON data:", error));
 });
+*/
