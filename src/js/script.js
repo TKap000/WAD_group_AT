@@ -29,7 +29,7 @@ req.responseType = 'json';
 req.onreadystatechange = () => {
     // if done recieving:
   if (req.readyState == XMLHttpRequest.DONE) {
-    populatePosts(req.response);
+    //populatePosts(req.response.record);
   }
 };
 
@@ -38,6 +38,7 @@ req.setRequestHeader("X-Master-Key", "$2a$10$oZq1VTb9o0etGF.YjwqYK.jxJnRYiA0Q1pP
 req.onload = function(e) {
     if (this.status == 200) {
       console.log('response', this.response); // JSON response 
+      populatePosts(this.response.record);
     }
   };
 req.send();
@@ -52,7 +53,7 @@ function populatePosts(data) {
     // loop by object in data
     for(var post in data){
 
-        console.log(data.length);
+        console.log(data[post].postID);
 
         const postElement = document.createElement("article");
         postElement.className = "post"; // for style
@@ -63,27 +64,27 @@ function populatePosts(data) {
         userIconElement.className = "user-icon-post";
 
         const dateElement = document.createElement("p");
-        dateElement.textContent = post.created;
+        dateElement.textContent = data[post].created;
 
         const postImgElement = document.createElement("img");
         //postImgElement.setAttribute("src", post.img) // wrong path in file, needs to be this file relative #ofcource-it-is
 
         const postTextElement = document.createElement("p");
-        postTextElement.textContent = post.created;
+        postTextElement.textContent = data[post].content;
 
         const postLikeElement = document.createElement("button");
         postLikeElement.className = "like-btn";
         postLikeElement.textContent = "👍";
 
-        postHeaderElement.appendChild(userIconElement);
-        postHeaderElement.appendChild(dateElement);
+        dataDisplay.appendChild(postElement);
 
         postElement.appendChild(postHeaderElement);
         postElement.appendChild(postImgElement);
         postElement.appendChild(postTextElement);
         postElement.appendChild(postLikeElement);
 
-        dataDisplay.appendChild(postElement);
+        postHeaderElement.appendChild(userIconElement);
+        postHeaderElement.appendChild(dateElement);
 
     }
         
