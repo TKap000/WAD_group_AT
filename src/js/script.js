@@ -59,15 +59,25 @@ function populatePosts(data) {
         postElement.className = "post"; // for style
 
         const postHeaderElement = document.createElement("div");
+        postHeaderElement.className = "post-header";
 
         const userIconElement = document.createElement("a");
         userIconElement.className = "user-icon-post";
+        userIconElement.setAttribute("alt", "user-icon");
+        userIconElement.setAttribute("href", "login.html");
+
+        const IconImgElement = document.createElement("img");
+        IconImgElement.className = "user-icon-post";
+        IconImgElement.setAttribute("src", "./res/images/me.png");
 
         const dateElement = document.createElement("p");
+        dateElement.className = "post-date";
         dateElement.textContent = data[post].created;
 
         const postImgElement = document.createElement("img");
-        //postImgElement.setAttribute("src", post.img) // wrong path in file, needs to be this file relative #ofcource-it-is
+        if(data[post].img != ""){
+            postImgElement.setAttribute("src", data[post].img)
+        }
 
         const postTextElement = document.createElement("p");
         postTextElement.textContent = data[post].content;
@@ -84,6 +94,8 @@ function populatePosts(data) {
         postElement.appendChild(postLikeElement);
 
         postHeaderElement.appendChild(userIconElement);
+        userIconElement.appendChild(IconImgElement);
+
         postHeaderElement.appendChild(dateElement);
 
     }

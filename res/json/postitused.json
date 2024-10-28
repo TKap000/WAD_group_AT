@@ -4,7 +4,7 @@
         "author": "Nimi_1",
         "created": "2021-03-01T12:00:00",
         "content": "Tartu 2022",
-        "img":"../images/pilt1.jpg",
+        "img":"./res/images/pilt1.jpg",
         "likes": 5,
         "comments": [
             {
