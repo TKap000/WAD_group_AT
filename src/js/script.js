@@ -80,6 +80,7 @@ function populatePosts(data) {
         }
 
         const postTextElement = document.createElement("p");
+        postTextElement.className = "post-text";
         postTextElement.textContent = data[post].content;
 
         const postLikeElement = document.createElement("button");
@@ -99,10 +100,6 @@ function populatePosts(data) {
         postHeaderElement.appendChild(dateElement);
 
     }
-        
-    
-
-    // Append the elements to the "dataDisplay" div
      
 }
 
