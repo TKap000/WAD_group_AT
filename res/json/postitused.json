@@ -2,7 +2,7 @@
     {
         "postID": 1,
         "author": "Jaan Tamm",
-        "created": "2012-12-12T04:19:00",
+        "created": "2012-12-12T04:19:01",
         "content": "Milkyway Galaxy through a radio telescope",
         "img":"./res/images/MW-radiobla.jpg",
         "likes": 5,
@@ -24,9 +24,10 @@
 
     {
         "postID": 2,
-        "author": "Nimi_2",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "author": "Jeff",
+        "created": "2012-12-12T04:19:30",
+        "content": "In the winter Estonians recommend going to the sauna.",
+        "img":"./res/images/science1.jpg",
         "likes": 5,
         "comments": [
             {
@@ -47,8 +48,9 @@
     {
         "postID": 3,
         "author": "Nimi_3",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2012-12-12T04:19:45",
+        "content": "p3",
+        "img":"./res/images/flameplace.gif",
         "likes": 5,
         "comments": [
             {
@@ -69,8 +71,8 @@
     {
         "postID": 4,
         "author": "Nimi_4",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2012-12-12T04:19:47",
+        "content": "p4",
         "likes": 5,
         "comments": [
             {
@@ -91,8 +93,8 @@
     {
         "postID": 5,
         "author": "Nimi_5",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2012-12-12T04:19:49",
+        "content": "p5",
         "likes": 5,
         "comments": [
             {
@@ -113,7 +115,7 @@
     {
         "postID": 6,
         "author": "Nimi_6_Validator",
-        "created": "2021-03-01T12:00:00",
+        "created": "2012-12-12T04:19:53",
         "content": "I validate json! https://jsonlint.com/",
         "likes": 5,
         "comments": [
@@ -135,8 +137,8 @@
     {
         "postID": 7,
         "author": "Nimi_7",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2012-12-12T04:19:56",
+        "content": "p7",
         "likes": 5,
         "comments": [
             {
@@ -157,8 +159,8 @@
     {
         "postID": 8,
         "author": "Nimi_8",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2012-12-12T04:19:57",
+        "content": "p8",
         "likes": 5,
         "comments": [
             {
@@ -179,8 +181,8 @@
     {
         "postID": 9,
         "author": "Nimi_9",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2012-12-12T04:19:59",
+        "content": "p9",
         "likes": 5,
         "comments": [
             {
@@ -201,8 +203,8 @@
     {
         "postID": 10,
         "author": "Nimi_10",
-        "created": "2021-03-01T12:00:00",
-        "content": "Tartu 2022",
+        "created": "2024-04-20T04:20:00",
+        "content": "p10",
         "likes": 5,
         "comments": [
             {

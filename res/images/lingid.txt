@@ -2,3 +2,5 @@ pilt1 - https://www.google.com/url?sa=i&url=https%3A%2F%2Ftartu2024.ee%2Fen%2Fta
 pilt2 - https://darknetdiaries.com/imgs/wallpapers/CircuitTree%20Desktop.jpg
 gif3  - https://en.wikipedia.org/wiki/Laser_Interferometer_Space_Antenna#/media/File:LISA_GW+_effect.gif
 pilt4 - https://www.researchgate.net/figure/Milky-Way-image-obtained-in-various-wavelengths-from-g-ray-to-radio-and-showing_fig1_284550492
+MW-radiobla.jpg - https://www.researchgate.net/figure/Milky-Way-image-obtained-in-various-wavelengths-from-g-ray-to-radio-and-showing_fig1_284550492
+ic.jpg - https://dlcdnwebimgs.asus.com/files/media/5a5987d1-7891-4861-b107-605b07ad1cfc/v1/assets/image/proart/article_cover.jpg
