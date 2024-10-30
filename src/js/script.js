@@ -105,7 +105,7 @@ function populatePosts(data) {
 }*/
 
 
-// TASK 5. This ONLY works on deplaoyed page, browser security doesn't allow this kind of access to loacal filesystem.
+// TASK 5. This ONLY works on deployed page, browser security doesn't allow this kind of access to loacal filesystem.
 // this is working example (or would be, structurally)
 // JSON data displayer from local source
 document.addEventListener("DOMContentLoaded", async function () {
