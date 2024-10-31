@@ -73,6 +73,7 @@
         "author": "Nimi_4",
         "created": "2012-12-12T04:19:47",
         "content": "p4",
+        "img": "",
         "likes": 5,
         "comments": [
             {
@@ -95,6 +96,7 @@
         "author": "Nimi_5",
         "created": "2012-12-12T04:19:49",
         "content": "p5",
+        "img": "",
         "likes": 5,
         "comments": [
             {
@@ -117,6 +119,7 @@
         "author": "Nimi_6_Validator",
         "created": "2012-12-12T04:19:53",
         "content": "I validate json! https://jsonlint.com/",
+        "img": "",
         "likes": 5,
         "comments": [
             {
@@ -139,6 +142,7 @@
         "author": "Nimi_7",
         "created": "2012-12-12T04:19:56",
         "content": "p7",
+        "img": "",
         "likes": 5,
         "comments": [
             {
@@ -161,6 +165,7 @@
         "author": "Nimi_8",
         "created": "2012-12-12T04:19:57",
         "content": "p8",
+        "img": "",
         "likes": 5,
         "comments": [
             {
@@ -183,6 +188,7 @@
         "author": "Nimi_9",
         "created": "2012-12-12T04:19:59",
         "content": "p9",
+        "img": "",
         "likes": 5,
         "comments": [
             {
@@ -205,6 +211,7 @@
         "author": "Nimi_10",
         "created": "2024-04-20T04:20:00",
         "content": "p10",
+        "img": "",
         "likes": 5,
         "comments": [
             {

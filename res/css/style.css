@@ -146,6 +146,12 @@ img ~ p{
     margin-bottom: 10px;
 }
 
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .user-icon-post {
     width: 30px;
     height: 30px;
@@ -161,9 +167,48 @@ img ~ p{
     padding: 5px 10px;
 }
 
+.like-count {
+    background-color: #a3c09c;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.post-comment-container {
+    align-self: center;
+    background-color: #f7f7f7;
+    border: solid;
+    margin: 5px 0;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #1f13a7;
+    color: #270404;
+    cursor: pointer;
+    padding: 2px 10px;
+}
+
+.post-comment {
+    background-color: #f7f7f7;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #1f13a7;
+    color: #270404;
+    cursor: pointer;
+    padding: 5px 4px;
+}
+
+.comment-author {
+    background-color: #f7f7f7;
+    color: #270404;
+    cursor: pointer;
+    padding: 1px 5px;
+}
+
 /*adj child*/
 .post-text + button{
-    background-color: #467e31;
+    background-color: #53d823;
     margin: 5px;
     border-radius: 3px;
     align-content: center;
