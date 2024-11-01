@@ -3,8 +3,8 @@
         "postID": 1,
         "author": "Jaan Tamm",
         "created": "2012-12-12T04:19:01",
-        "content": "Milkyway Galaxy through a radio telescope",
-        "img":"./res/images/MW-radiobla.jpg",
+        "content": "Tere Tulemast Tartu 2016!",
+        "img":"./res/images/pilt1.jpg",
         "likes": 5,
         "comments": [
             {
@@ -17,7 +17,7 @@
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Happiness lies not in possessions but in simplicity and contentment"
             }
         ]
     },
@@ -34,13 +34,13 @@
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "We shape our fate by the choices we make daily!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Our greatest freedom is to choose our response, regardless of circumstance!"
             }
         ]
     },
@@ -49,7 +49,7 @@
         "postID": 3,
         "author": "Nimi_3",
         "created": "2012-12-12T04:19:45",
-        "content": "p3",
+        "content": "To know thyself is the beginning of wisdom and understanding!",
         "img":"./res/images/flameplace.gif",
         "likes": 5,
         "comments": [
@@ -57,13 +57,13 @@
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "In questioning, we find meaning; in answering, we discover purpose!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "True freedom requires not a lack of limits, but clarity of purpose!"
             }
         ]
     },
@@ -72,21 +72,21 @@
         "postID": 4,
         "author": "Nimi_4",
         "created": "2012-12-12T04:19:47",
-        "content": "p4",
-        "img": "",
+        "content": "Milkyway Galaxy through a radio telescope",
+        "img": "./res/images/MW-radiobla.jpg",
         "likes": 5,
         "comments": [
             {
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "In suffering, we learn to transcend and grow toward our potential!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Only in mindful action can we find fulfillment and harmony!"
             }
         ]
     },
@@ -95,21 +95,21 @@
         "postID": 5,
         "author": "Nimi_5",
         "created": "2012-12-12T04:19:49",
-        "content": "p5",
-        "img": "",
+        "content": "Within the lattice of silicon and copper flows a pulse—a synthetic heartbeat, coding consciousness. In these circuits, ancient logic merges with digital destiny, crafting worlds unseen.",
+        "img": "./res/images/circuittree.jpg",
         "likes": 5,
         "comments": [
             {
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Our lives are the stories we tell ourselves and act upon!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "The unexamined life isn’t lived to its fullest potential!"
             }
         ]
     }, 
@@ -119,7 +119,7 @@
         "author": "Nimi_6_Validator",
         "created": "2012-12-12T04:19:53",
         "content": "I validate json! https://jsonlint.com/",
-        "img": "",
+        "img": "./res/images/jsonvalidate.jpg",
         "likes": 5,
         "comments": [
             {
@@ -141,21 +141,21 @@
         "postID": 7,
         "author": "Nimi_7",
         "created": "2012-12-12T04:19:56",
-        "content": "p7",
-        "img": "",
+        "content": "Genuine love is a choice to seek the good of others selflessly!",
+        "img": "./res/images/gravity.gif",
         "likes": 5,
         "comments": [
             {
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "In the space between stimulus and response lies our freedom!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Strength is not born of ease but through facing and transcending adversity!"
             }
         ]
     },
@@ -164,21 +164,21 @@
         "postID": 8,
         "author": "Nimi_8",
         "created": "2012-12-12T04:19:57",
-        "content": "p8",
-        "img": "",
+        "content": "Real wisdom begins in embracing uncertainty, for it fuels true understanding",
+        "img": "./res/images/d2.jpg",
         "likes": 5,
         "comments": [
             {
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Purpose gives life its essence; without it, we’re drifting!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "True peace comes not from external conditions but from an internal state!"
             }
         ]
     },
@@ -187,21 +187,21 @@
         "postID": 9,
         "author": "Nimi_9",
         "created": "2012-12-12T04:19:59",
-        "content": "p9",
-        "img": "",
+        "content": "Only by recognizing our limitations can we realize our potential!",
+        "img": "./res/images/ic.jpg",
         "likes": 5,
         "comments": [
             {
                 "commentID": 1,
                 "author": "Nimi_2",
                 "created": "2021-03-01T12:01:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "The pursuit of knowledge is endless, like the horizons of understanding!"
             },
             {
                 "commentID": 2,
                 "author": "Nimi_3",
                 "created": "2021-03-01T12:02:00",
-                "content": "Tartu 2022 on hea mõte!"
+                "content": "Our character is the sum of our repeated actions and intentions!"
             }
         ]
     }, 
@@ -210,8 +210,8 @@
         "postID": 10,
         "author": "Nimi_10",
         "created": "2024-04-20T04:20:00",
-        "content": "p10",
-        "img": "",
+        "content": "The heart of joy lies in finding beauty in life’s smallest moments!",
+        "img": "./res/images/vague.jpg",
         "likes": 5,
         "comments": [
             {
