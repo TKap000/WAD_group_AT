@@ -19,7 +19,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
+  routes, // added comma
+}); //added semicolon
 
 export default router
