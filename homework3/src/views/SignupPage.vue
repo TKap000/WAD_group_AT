@@ -4,20 +4,23 @@
     <div>
       <Signup  class = "signuppage"/>
     </div>
-    <Footer />
+    
   </div>
+  <br>
+  <Footer />
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import Signup from "@/components/SignUp.vue";
-
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "SignupPage",
   components: {
     Header,
     Signup,
+    Footer,
   },
 };
 </script>

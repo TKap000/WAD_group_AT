@@ -26,13 +26,13 @@
         <button type="submit" @click.prevent="submitForm">Sign Up</button>
       </form>
       <ul class="requirements">
-        <li
-          v-for="(requirement, key) in passwordRequirements"
-          
-          :key="key"
-          :class="requirement.predicate ? 'is-success' : 'is-error'"
-        >
-          {{ requirement.name }}
+        
+        <li v-for="(requirement, key) in passwordRequirements"
+            :key="key"
+            :class="requirement.predicate ? 'is-success' : 'is-error'"
+            :hidden="requirement.predicate ? true : false"
+            
+            >{{ requirement.name }}
         </li>
       </ul>
       
@@ -65,20 +65,28 @@ watch(passwordRequirements, () => {
       predicate: password.value.toLowerCase() !== password.value,
     },
     {
-      name: 'Password must contain lowercase letters',
-      predicate: password.value.toUpperCase() !== password.value,
+      name: 'Password must contain at least 2 lowercase letters',
+      predicate: /[a-z]{2,}/.test(password.value),
     },
     {
-      name: 'Password must contain numbers',
+      name: 'Password must contain at least 1 number',
       predicate: /\d/.test(password.value),
     },
     {
-      name: 'Password must contain symbols',
-      predicate: /\W/.test(password.value),
+      name: 'Password must start with an uppercase letter',
+      predicate: /[A-Z]/.test(password.value[0]),
+    },
+    {
+      name: 'Password must include _ ',
+      predicate: /[_]/.test(password.value),
     },
     {
       name: 'Password must be at least 8 characters long',
       predicate: password.value.length >= 8,
+    },
+    {
+      name: 'Password must be less than 15 characters long',
+      predicate: password.value.length < 15,
     }
   ]))
 
@@ -133,7 +141,7 @@ input {
 
 button {
   margin-bottom: 12px;
-  width: 20%
+  width: 100px;
 }
 
 .requirements {
