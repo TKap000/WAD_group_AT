@@ -16,7 +16,8 @@ const routes = [
   {
     path: '/main',
     name: 'main',
-    component: MainPage, // Main Page component
+    //component: MainPage, // Main Page component
+    component: () => import('../views/MainPage.vue'),
   },
   {
     path: '/signup',

@@ -1,7 +1,10 @@
 <template>
   <div>
     <Header />
-    <Signup />
+    <div>
+      <Signup  class = "signuppage"/>
+    </div>
+    <Footer />
   </div>
 </template>
 
@@ -20,5 +23,10 @@ export default {
 </script>
 
 <style>
-/* Add main page styling here */
+.signuppage {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+}
 </style>

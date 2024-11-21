@@ -28,6 +28,7 @@
       <ul class="requirements">
         <li
           v-for="(requirement, key) in passwordRequirements"
+          
           :key="key"
           :class="requirement.predicate ? 'is-success' : 'is-error'"
         >
@@ -37,6 +38,20 @@
       
     </div>
 </template>
+
+<script setup>
+  const emit = defineEmits([
+  'update:password',
+  'update:validity'
+])
+
+watch(passwordRequirements, () => {
+  emit(
+    'update:validity',
+    passwordRequirements.value.reduce((v, p) => v && p.predicate, true)
+  )
+})
+</script>
   
 <script>
   import { computed, ref, watch } from 'vue'
@@ -46,23 +61,23 @@
   
   const passwordRequirements = computed(() => ([
     {
-      name: 'Must contain uppercase letters',
+      name: 'Password must contain uppercase letters',
       predicate: password.value.toLowerCase() !== password.value,
     },
     {
-      name: 'Must contain lowercase letters',
+      name: 'Password must contain lowercase letters',
       predicate: password.value.toUpperCase() !== password.value,
     },
     {
-      name: 'Must contain numbers',
+      name: 'Password must contain numbers',
       predicate: /\d/.test(password.value),
     },
     {
-      name: 'Must contain symbols',
+      name: 'Password must contain symbols',
       predicate: /\W/.test(password.value),
     },
     {
-      name: 'Must be at least 8 characters long',
+      name: 'Password must be at least 8 characters long',
       predicate: password.value.length >= 8,
     }
   ]))
@@ -73,6 +88,10 @@
       return {
         name: "",
         email: "",
+        password: "",
+        showPassword: false,
+        passwordRequirements: [],
+
       };
     },
     methods: {
@@ -81,6 +100,8 @@
       },
     },
   };
+
+
 </script>
   
 <style scoped>
@@ -121,6 +142,7 @@ button {
 
 .is-success {
   color: #96CA2D;
+  /* visibility: hidden; */
 }
 
 .is-error {

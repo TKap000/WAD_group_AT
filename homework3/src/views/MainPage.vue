@@ -2,7 +2,7 @@
   <div>
     <Header />
     <h1>Main Page</h1>
-    <div v-if="posts.length > 0">
+    <div v-if="posts.length > 0"  class = "mainpage">
       <Post v-for="post in posts" :key="post.postID" :post="post" />
     </div>
     <div v-else>
@@ -41,5 +41,10 @@ export default {
 </script>
 
 <style>
-/* Add main page styling here */
+.mainpage {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+}
 </style>
