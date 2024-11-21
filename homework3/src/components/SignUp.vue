@@ -14,6 +14,8 @@
         <input
           :type="showPassword ? 'text' : 'password'"
           v-model="password"
+          @focus="magic_flag = true"
+          @blur="magic_flag = false"
           @change="$emit('update:password', $event.target.value)"
           id="password"
           placeholder="Password "
@@ -23,9 +25,9 @@
         </button>
 
         <br>
-        <button type="submit" @click.prevent="submitForm">Sign Up</button>
+        <button v-if="validity" type="submit" @click.prevent="submitForm">Sign Up</button>
       </form>
-      <ul class="requirements">
+      <ul v-if="magic_flag" class="requirements">
         
         <li v-for="(requirement, key) in passwordRequirements"
             :key="key"
@@ -42,14 +44,14 @@
 <script setup>
   const emit = defineEmits([
   'update:password',
-  'update:validity'
 ])
 
+// single value for checking the validity of all parts
 watch(passwordRequirements, () => {
-  emit(
-    'update:validity',
-    passwordRequirements.value.reduce((v, p) => v && p.predicate, true)
-  )
+    validity = passwordRequirements.value.reduce((accumulator, passreq) =>  {
+      return accumulator && passreq.predicate
+    }, true)
+  console.log(validity)
 })
 </script>
   
@@ -58,6 +60,8 @@ watch(passwordRequirements, () => {
 
   const password = ref('')
   const showPassword = ref(false)
+  var validity = false // does not update correctly
+  const magic_flag = ref(false)
   
   const passwordRequirements = computed(() => ([
     {
@@ -99,12 +103,21 @@ watch(passwordRequirements, () => {
         password: "",
         showPassword: false,
         passwordRequirements: [],
-
+        validity: false,
       };
     },
     methods: {
       submitForm() {
-        alert(`Signed up with Name: ${this.name}, Email: ${this.email}`);
+        if (validity && this.name != "" && this.email != "") {
+          alert(`Signed up with Name: ${this.name}, Email: ${this.email}`);
+          this.$router.push({ path: 'main' })
+        }
+        if(!this.name || !this.email ){
+          alert(`You need to fill in a name and an email!`);
+        }
+        if(!validity){
+          alert(`Password conditions not met!`);
+        }
       },
     },
   };

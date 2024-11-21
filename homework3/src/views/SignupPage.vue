@@ -2,7 +2,7 @@
   <div>
     <Header />
     <div>
-      <Signup  class = "signuppage"/>
+      <Signup  class = "signuppage" />
     </div>
     
   </div>
