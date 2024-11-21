@@ -8,11 +8,11 @@ const routes = [
   //   name: 'home',
   //   component: HomeView, // Home page component
   // },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'), // Lazy-loaded About page
-  // },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'), // Lazy-loaded About page
+  },
   {
     path: '/main',
     name: 'main',
