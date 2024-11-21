@@ -4,7 +4,7 @@
         "author": "Jaan Tamm",
         "created": "2012-12-12T04:19:01",
         "content": "Tere Tulemast Tartu 2016!",
-        "img":"./res/images/pilt1.jpg",
+        "img":"/images/pilt1.jpg",
         "likes": 5,
         "comments": [
             {
@@ -27,7 +27,7 @@
         "author": "Jeff",
         "created": "2012-12-12T04:19:30",
         "content": "In the winter Estonians recommend going to the sauna.",
-        "img":"./res/images/science1.jpg",
+        "img":"/images/science1.jpg",
         "likes": 5,
         "comments": [
             {
@@ -50,7 +50,7 @@
         "author": "V1ruS_M@nipulat0r",
         "created": "2012-12-12T04:19:45",
         "content": "To know thyself is the beginning of wisdom and understanding!",
-        "img":"./res/images/flameplace.gif",
+        "img":"/images/flameplace.gif",
         "likes": 5,
         "comments": [
             {
@@ -73,7 +73,7 @@
         "author": "Xpl0itR3b3llion",
         "created": "2012-12-12T04:19:47",
         "content": "Milkyway Galaxy through a radio telescope",
-        "img": "./res/images/MW-radiobla.jpg",
+        "img": "/images/MW-radiobla.jpg",
         "likes": 5,
         "comments": [
             {
@@ -96,7 +96,7 @@
         "author": "ByteDr4g0n",
         "created": "2012-12-12T04:19:49",
         "content": "Within the lattice of silicon and copper flows a pulse—a synthetic heartbeat, coding consciousness. In these circuits, ancient logic merges with digital destiny, crafting worlds unseen.",
-        "img": "./res/images/circuittree.jpg",
+        "img": "/images/circuittree.jpg",
         "likes": 5,
         "comments": [
             {
@@ -119,7 +119,7 @@
         "author": "Nimi_6_Validator",
         "created": "2012-12-12T04:19:53",
         "content": "I validate json! https://jsonlint.com/",
-        "img": "./res/images/jsonvalidate.jpg",
+        "img": "/images/jsonvalidate.jpg",
         "likes": 5,
         "comments": [
             {
@@ -142,7 +142,7 @@
         "author": "D@rkCyb3rL0rd",
         "created": "2012-12-12T04:19:56",
         "content": "Genuine love is a choice to seek the good of others selflessly!",
-        "img": "./res/images/gravity.gif",
+        "img": "/images/gravity.gif",
         "likes": 5,
         "comments": [
             {
@@ -165,7 +165,7 @@
         "author": "Xpl0itR3b3llion",
         "created": "2012-12-12T04:19:57",
         "content": "Real wisdom begins in embracing uncertainty, for it fuels true understanding",
-        "img": "./res/images/d2.jpg",
+        "img": "/images/d2.jpg",
         "likes": 5,
         "comments": [
             {
@@ -188,7 +188,7 @@
         "author": "C0nsp1r@cyN3rd",
         "created": "2012-12-12T04:19:59",
         "content": "Only by recognizing our limitations can we realize our potential!",
-        "img": "./res/images/ic.jpg",
+        "img": "/images/ic.jpg",
         "likes": 5,
         "comments": [
             {
@@ -211,7 +211,7 @@
         "author": "Cyb3rPh4nt0m",
         "created": "2024-04-20T04:20:00",
         "content": "The heart of joy lies in finding beauty in life’s smallest moments!",
-        "img": "./res/images/vague.jpg",
+        "img": "/images/vague.jpg",
         "likes": 5,
         "comments": [
             {

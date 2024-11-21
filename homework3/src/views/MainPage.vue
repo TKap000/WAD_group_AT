@@ -1,31 +1,45 @@
 <template>
-    <div>
-      <h1>Main Page</h1>
-      <ul>
-        <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
-      </ul>
+  <div>
+    <Header />
+    <h1>Main Page</h1>
+    <div v-if="posts.length > 0">
+      <Post v-for="post in posts" :key="post.postID" :post="post" />
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "MainPage",
-    data() {
-      return {
-        posts: [
-          { id: 1, title: "Post 1" },
-          { id: 2, title: "Post 2" },
-          { id: 3, title: "Post 3" },
-          { id: 4, title: "Post 4" },
-          { id: 5, title: "Post 5" },
-          { id: 6, title: "Post 6" },
-          { id: 7, title: "Post 7" },
-          { id: 8, title: "Post 8" },
-          { id: 9, title: "Post 9" },
-          { id: 10, title: "Post 10" },
-        ],
-      };
+    <div v-else>
+      <p>Loading posts...</p>
+    </div>
+    <Footer />
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from "vuex";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import Post from "@/components/Post.vue";
+
+export default {
+  name: "MainPage",
+  components: {
+    Header,
+    Footer,
+    Post,
+  },
+  computed: {
+    ...mapGetters(["allPosts"]),
+    posts() {
+      return this.allPosts;
     },
-  };
-  </script>
-  
+  },
+  methods: {
+    ...mapActions(["fetchPosts"]),
+  },
+  created() {
+    this.fetchPosts();
+  },
+};
+</script>
+
+<style>
+/* Add main page styling here */
+</style>

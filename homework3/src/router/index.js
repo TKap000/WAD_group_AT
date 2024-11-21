@@ -1,37 +1,33 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 import MainPage from '../views/MainPage.vue';
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView, // Home page component
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'), // Lazy-loaded About page
   },
   {
     path: '/main',
     name: 'main',
-    component: MainPage, // Add Main Page route
+    component: MainPage, // Main Page component
   },
   {
     path: '/signup',
     name: 'signup',
-    component: () => import(/* webpackChunkName: "signup" */ '../views/SignupPage.vue'), // Add Signup Page route
+    component: () => import(/* webpackChunkName: "signup" */ '../views/SignupPage.vue'), // Lazy-loaded Signup page
   },
 ];
 
-
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes, // added comma
-}); //added semicolon
+  history: createWebHashHistory(), // Use hash-based history for SPA navigation
+  routes,
+});
 
-export default router
+export default router;
