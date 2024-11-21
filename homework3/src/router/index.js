@@ -3,16 +3,16 @@ import HomeView from '../views/HomeView.vue';
 import MainPage from '../views/MainPage.vue';
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView, // Home page component
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'), // Lazy-loaded About page
-  },
+  // {
+  //   path: '/',
+  //   name: 'home',
+  //   component: HomeView, // Home page component
+  // },
+  // {
+  //   path: '/about',
+  //   name: 'about',
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'), // Lazy-loaded About page
+  // },
   {
     path: '/main',
     name: 'main',

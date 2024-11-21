@@ -1,6 +1,6 @@
 <template>
     <footer>
-      <p>&copy; 2024 My Vue Project</p>
+      <p>&copy; WAD AT</p>
     </footer>
   </template>
   
