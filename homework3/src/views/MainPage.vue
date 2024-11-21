@@ -70,25 +70,38 @@ export default {
 }
 
 .destroy_likes {
-  background: linear-gradient(to bottom, #500a0a, #ff0000);
+  background: linear-gradient(to bottom, #ff4d4d, #430101); 
   color: #000;
   border: none;
   padding: 20px 20px;
   cursor: pointer;
   font-size: 69px;
   border-radius: 128px;
-  position: relative;
-  box-shadow: 0px 8px 15px rgba(30, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative; 
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.2s ease, box-shadow 0.3s ease; 
+}
+
+.destroy_likes::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.5); 
+  border-radius: 50%; 
+  pointer-events: none; 
+  transform: rotate(-45deg); 
 }
 
 .destroy_likes:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); 
 }
 
 .destroy_likes:active {
-  transform: scale(0.95);
+  transform: scale(0.95); 
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 </style>
