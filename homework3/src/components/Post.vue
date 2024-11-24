@@ -25,6 +25,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 .like-btn {
   background-color: #cd1f93;

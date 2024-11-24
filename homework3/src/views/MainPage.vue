@@ -1,40 +1,38 @@
 <template>
   <div>
     <Header />
-    <h1>Welcome back, it's a pleasure to be of thou precense.</h1>
+    <h1>Welcome back, it's a pleasure to be of thou presence.</h1>
     <div>
       <button class="destroy_likes" @click="resetLikes">"Don't Click!"</button>
     </div>
     <div class="content-wrapper">
-            <aside class="sidebar-left">
-                <ul hidden>
-                    <li>Post 1</li>
-                    <li>Post 2</li>
-                    <li>Post 3</li>
-                    <li>Post 4</li>
-                    <li>Post 5</li>
-                </ul>
-            </aside>
-    <div v-if="posts.length > 0" class="mainpage">
-      <Post
-        v-for="post in posts"
-        :key="post.postID"
-        :post="post"
-        :incrementLikes="incrementLikes"
-      />
+      <aside class="sidebar-left">
+        <ul hidden>
+          <li>Post 1</li>
+          <li>Post 2</li>
+          <li>Post 3</li>
+          <li>Post 4</li>
+          <li>Post 5</li>
+        </ul>
+      </aside>
+      <div v-if="posts.length > 0" class="mainpage">
+        <Post
+          v-for="post in posts"
+          :key="post.postID"
+          :post="post"
+          :incrementLikes="incrementLikes"
+        />
+      </div>
+      <aside class="sidebar-right">
+        <ul hidden>
+          <li>Post 1</li>
+          <li>Post 2</li>
+          <li>Post 3</li>
+          <li>Post 4</li>
+          <li>Post 5</li>
+        </ul>
+      </aside>
     </div>
-
-    <aside class="sidebar-right">
-                <ul hidden>
-                    <li>Post 1</li>
-                    <li>Post 2</li>
-                    <li>Post 3</li>
-                    <li>Post 4</li>
-                    <li>Post 5</li>
-                </ul>
-            </aside>
-        </div>
-
     <Footer />
   </div>
 </template>
@@ -55,32 +53,18 @@ export default {
   computed: {
     ...mapGetters(["allPosts"]),
     posts() {
-      return this.allPosts;
+      return this.allPosts; 
     },
   },
   methods: {
-    ...mapActions(["fetchPosts"]),
-
-    // Reset all likes to zero
-    resetLikes() {
-      this.posts.forEach((post) => {
-        post.likes = 0;
-      });
-    },
-
-    // Increment likes for a specific post
-    incrementLikes(postID) {
-      const post = this.posts.find((p) => p.postID === postID);
-      if (post) {
-        post.likes++;
-      }
-    },
+    ...mapActions(["fetchPosts", "incrementLikes", "resetLikes"]), 
   },
   created() {
     this.fetchPosts();
   },
 };
 </script>
+
 
 <style>
 .mainpage {

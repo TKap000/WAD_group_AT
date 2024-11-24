@@ -1,25 +1,38 @@
-// src/store/index.js
 import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    posts: [], // Define posts in state
+    posts: [],
   },
   mutations: {
     setPosts(state, posts) {
-      state.posts = posts; // Update posts in the state
+      state.posts = posts;
+    },
+    incrementLikes(state, postID) {
+      const post = state.posts.find((post) => post.postID === postID);
+      if (post) post.likes++;
+    },
+    resetLikes(state) {
+      state.posts.forEach((post) => {
+        post.likes = 0;
+      });
     },
   },
   actions: {
     fetchPosts({ commit }) {
-      // Simulate fetching posts (replace with your API call if necessary)
       const posts = require('../../Data/postitused.json');
       commit('setPosts', posts);
+    },
+    incrementLikes({ commit }, postID) {
+      commit('incrementLikes', postID);
+    },
+    resetLikes({ commit }) {
+      commit('resetLikes');
     },
   },
   getters: {
     allPosts(state) {
-      return state.posts; // Getter for posts
+      return state.posts;
     },
   },
 });
