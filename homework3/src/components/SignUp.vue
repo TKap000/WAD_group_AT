@@ -25,7 +25,10 @@
         </button>
 
         <br>
-        <button v-if="validity" type="submit" @click.prevent="submitForm">Sign Up</button>
+        <button type="submit" @click.prevent="submitForm">Sign Up</button>
+        <br>
+        <p>Already have an account?</p>
+        <button type="button" @click="goToLogin">Log In</button>
       </form>
       <ul v-if="magic_flag" class="requirements">
         
@@ -60,7 +63,7 @@ watch(passwordRequirements, () => {
 
   const password = ref('')
   const showPassword = ref(false)
-  var validity = false // does not update correctly
+  var validity = false
   const magic_flag = ref(false)
   
   const passwordRequirements = computed(() => ([
@@ -119,7 +122,13 @@ watch(passwordRequirements, () => {
           alert(`Password conditions not met!`);
         }
       },
+
+      goToLogin(){
+        this.$router.push({ path: 'login' });
+      },
     },
+
+    
   };
 
 
