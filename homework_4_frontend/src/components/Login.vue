@@ -20,7 +20,7 @@
         </button>
 
         <br>
-        <button type="submit" @click.prevent="submitForm">Log in</button>
+        <button type="submit" @click.prevent="logIn">Log in</button>
         <p>Don't have an account?</p>
         <button type="button" @click.prevent="goToSignup">Sign Up</button>
       </form>
@@ -49,19 +49,34 @@
         showPassword: false,
       };
     },
+
     methods: {
-      submitForm() {
-        if (validity && this.name != "" && this.email != "") {
-          alert(`Logging in`);
-          this.$router.push({ path: 'main' })
-        }
-        if(!this.name || !this.email ){
-          alert(`You need to fill in a name and an email!`);
-        }
-        if(!validity){
-          alert(`Password conditions not met!`);
-        }
+
+        LogIn() {
+        var data = {
+          email: this.email,
+          password: this.password
+        };
+        // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
+        fetch("http://localhost:3000/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+            credentials: 'include', // Specifying that we need cookies
+            body: JSON.stringify(data),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data);
+        this.$router.push("/");
+        })
+        .catch((e) => {
+          console.log(e);
+          console.log("error");
+        });
       },
+  
 
       goToSignup(){
         this.$router.push({ path: 'signup' });
