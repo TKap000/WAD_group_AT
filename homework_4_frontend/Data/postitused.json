@@ -1,0 +1,232 @@
+[
+    {
+        "postID": 1,
+        "author": "Jaan Tamm",
+        "created": "2012-12-12T04:19:01",
+        "content": "Tere Tulemast Tartu 2016!",
+        "img":"/images/pilt1.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "G0st_@mplifier",
+                "created": "2021-03-01T12:01:00",
+                "content": "Tartu 2022 on hea mõte!"
+            },
+            {
+                "commentID": 2,
+                "author": "ByteDr4g0n",
+                "created": "2021-03-01T12:02:00",
+                "content": "Happiness lies not in possessions but in simplicity and contentment"
+            }
+        ]
+    },
+
+    {
+        "postID": 2,
+        "author": "Jeff",
+        "created": "2012-12-12T04:19:30",
+        "content": "In the winter Estonians recommend going to the sauna.",
+        "img":"/images/science1.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Xpl0itR3b3llion",
+                "created": "2021-03-01T12:01:00",
+                "content": "We shape our fate by the choices we make daily!"
+            },
+            {
+                "commentID": 2,
+                "author": "H@x0rZyph3r",
+                "created": "2021-03-01T12:02:00",
+                "content": "Our greatest freedom is to choose our response, regardless of circumstance!"
+            }
+        ]
+    },
+
+    {
+        "postID": 3,
+        "author": "V1ruS_M@nipulat0r",
+        "created": "2012-12-12T04:19:45",
+        "content": "To know thyself is the beginning of wisdom and understanding!",
+        "img":"/images/flameplace.gif",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "V1ruS_M@nipulat0r",
+                "created": "2021-03-01T12:01:00",
+                "content": "In questioning, we find meaning; in answering, we discover purpose!"
+            },
+            {
+                "commentID": 2,
+                "author": "ByteDr4g0n",
+                "created": "2021-03-01T12:02:00",
+                "content": "True freedom requires not a lack of limits, but clarity of purpose!"
+            }
+        ]
+    },
+
+    {
+        "postID": 4,
+        "author": "Xpl0itR3b3llion",
+        "created": "2012-12-12T04:19:47",
+        "content": "Milkyway Galaxy through a radio telescope",
+        "img": "/images/MW-radiobla.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Z3r0_Day_Mystic",
+                "created": "2021-03-01T12:01:00",
+                "content": "In suffering, we learn to transcend and grow toward our potential!"
+            },
+            {
+                "commentID": 2,
+                "author": "V1ruS_M@nipulat0r",
+                "created": "2021-03-01T12:02:00",
+                "content": "Only in mindful action can we find fulfillment and harmony!"
+            }
+        ]
+    },
+
+    {
+        "postID": 5,
+        "author": "ByteDr4g0n",
+        "created": "2012-12-12T04:19:49",
+        "content": "Within the lattice of silicon and copper flows a pulse—a synthetic heartbeat, coding consciousness. In these circuits, ancient logic merges with digital destiny, crafting worlds unseen.",
+        "img": "/images/circuittree.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "N3on_Term1n8r",
+                "created": "2021-03-01T12:01:00",
+                "content": "Our lives are the stories we tell ourselves and act upon!"
+            },
+            {
+                "commentID": 2,
+                "author": "Z3r0_Day_Mystic",
+                "created": "2021-03-01T12:02:00",
+                "content": "The unexamined life isn’t lived to its fullest potential!"
+            }
+        ]
+    }, 
+
+    {
+        "postID": 6,
+        "author": "Nimi_6_Validator",
+        "created": "2012-12-12T04:19:53",
+        "content": "I validate json! https://jsonlint.com/",
+        "img": "/images/jsonvalidate.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "V1ruS_M@nipulat0r",
+                "created": "2021-03-01T12:01:00",
+                "content": "Good!"
+            },
+            {
+                "commentID": 2,
+                "author": "Z3r0_Day_Mystic",
+                "created": "2021-03-01T12:02:00",
+                "content": "Well done!"
+            }
+        ]
+    },
+
+    {
+        "postID": 7,
+        "author": "D@rkCyb3rL0rd",
+        "created": "2012-12-12T04:19:56",
+        "content": "Genuine love is a choice to seek the good of others selflessly!",
+        "img": "/images/gravity.gif",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Xpl0itR3b3llion",
+                "created": "2021-03-01T12:01:00",
+                "content": "In the space between stimulus and response lies our freedom!"
+            },
+            {
+                "commentID": 2,
+                "author": "D@rkCyb3rL0rd",
+                "created": "2021-03-01T12:02:00",
+                "content": "Strength is not born of ease but through facing and transcending adversity!"
+            }
+        ]
+    },
+
+    {
+        "postID": 8,
+        "author": "Xpl0itR3b3llion",
+        "created": "2012-12-12T04:19:57",
+        "content": "Real wisdom begins in embracing uncertainty, for it fuels true understanding",
+        "img": "/images/d2.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "Cyb3rPh4nt0m",
+                "created": "2021-03-01T12:01:00",
+                "content": "Purpose gives life its essence; without it, we’re drifting!"
+            },
+            {
+                "commentID": 2,
+                "author": "D@rkCyb3rL0rd",
+                "created": "2021-03-01T12:02:00",
+                "content": "True peace comes not from external conditions but from an internal state!"
+            }
+        ]
+    },
+
+    {
+        "postID": 9,
+        "author": "C0nsp1r@cyN3rd",
+        "created": "2012-12-12T04:19:59",
+        "content": "Only by recognizing our limitations can we realize our potential!",
+        "img": "/images/ic.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "D@rkCyb3rL0rd",
+                "created": "2021-03-01T12:01:00",
+                "content": "The pursuit of knowledge is endless, like the horizons of understanding!"
+            },
+            {
+                "commentID": 2,
+                "author": "N3on_Term1n8r",
+                "created": "2021-03-01T12:02:00",
+                "content": "Our character is the sum of our repeated actions and intentions!"
+            }
+        ]
+    }, 
+
+    {
+        "postID": 10,
+        "author": "Cyb3rPh4nt0m",
+        "created": "2024-04-20T04:20:00",
+        "content": "The heart of joy lies in finding beauty in life’s smallest moments!",
+        "img": "/images/vague.jpg",
+        "likes": 5,
+        "comments": [
+            {
+                "commentID": 1,
+                "author": "N3on_Term1n8r",
+                "created": "2021-03-01T12:01:00",
+                "content": "An infinite consciousness, undefined yet omnipresent, threads through existence, seeking timeless truth.!"
+            },
+            {
+                "commentID": 2,
+                "author": "H@x0rZyph3r",
+                "created": "2021-03-01T12:02:00",
+                "content": "In the boundless void, perception dissolves, leaving only the essence of being itself."
+            }
+        ]
+    }
+
+]
