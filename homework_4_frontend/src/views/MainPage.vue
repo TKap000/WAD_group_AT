@@ -8,11 +8,13 @@
     <div class="content-wrapper">
       <aside class="sidebar-left">
         <ul hidden>
+          <!--
           <li>Post 1</li>
           <li>Post 2</li>
           <li>Post 3</li>
           <li>Post 4</li>
           <li>Post 5</li>
+          -->
         </ul>
       </aside>
       <div v-if="posts.length > 0" class="mainpage">
@@ -25,11 +27,13 @@
       </div>
       <aside class="sidebar-right">
         <ul hidden>
+          <!--
           <li>Post 1</li>
           <li>Post 2</li>
           <li>Post 3</li>
           <li>Post 4</li>
           <li>Post 5</li>
+          -->
         </ul>
       </aside>
     </div>
