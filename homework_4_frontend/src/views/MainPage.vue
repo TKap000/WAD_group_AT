@@ -2,8 +2,12 @@
   <div>
     <Header />
     <h1>Welcome back, it's a pleasure to be of thou presence.</h1>
+    <button type="button" @click="Logout">Log Out</button>
+    <br>
+    <br>
     <div>
       <button class="destroy_likes" @click="resetLikes">"Don't Click!"</button>
+      
     </div>
     <div class="content-wrapper">
       <aside class="sidebar-left">
@@ -60,11 +64,31 @@ export default {
       return this.allPosts; 
     },
   },
+
   methods: {
     ...mapActions(["fetchPosts", "incrementLikes", "resetLikes"]), 
-  },
-  created() {
-    this.fetchPosts();
+
+    created() {
+      this.fetchPosts();
+    },
+    Logout() {
+      console.log("HERE");
+      fetch("http://localhost:3000/auth/logout", {
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log('jwt removed');
+        //console.log('jwt removed:' + auth.authenticated());
+        this.$router.push("/login");
+
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error logout");
+      });
+    },
   },
 };
 </script>
@@ -84,7 +108,7 @@ export default {
   border: none;
   padding: 20px 20px;
   cursor: pointer;
-  font-size: 69px;
+  font-size: 40px;
   border-radius: 128px;
   position: relative; 
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); 
@@ -96,8 +120,8 @@ export default {
   position: absolute;
   top: 10%;
   left: 10%;
-  width: 80%;
-  height: 40%;
+  width: 20%;
+  height: 20%;
   background: rgba(255, 255, 255, 0.5); 
   border-radius: 50%; 
   pointer-events: none; 

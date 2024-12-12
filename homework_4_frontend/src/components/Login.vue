@@ -20,7 +20,7 @@
         </button>
 
         <br>
-        <button type="submit" @click.prevent="logIn">Log in</button>
+        <button type="submit" @click.prevent="LogIn">Log in</button>
         <p>Don't have an account?</p>
         <button type="button" @click.prevent="goToSignup">Sign Up</button>
       </form>
