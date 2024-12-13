@@ -30,10 +30,23 @@ const createTblQuery = `
         email VARCHAR(200) NOT NULL UNIQUE,
         password VARCHAR(200) NOT NULL 
     );`;
+const posttable = `
+    CREATE TABLE IF NOT EXISTS "posttable" (
+	    "id" SERIAL PRIMARY KEY,         
+	    "title" VARCHAR(200) NOT NULL,
+	    "body" VARCHAR(200) NOT NULL,
+        "urllink" VARCHAR(200)  
+    );`;
 
 execute(createTblQuery).then(result => {
     if (result) {
         console.log('Table "users" is created');
+    }
+});
+
+execute(posttable).then(result => {
+    if (result) {
+        console.log('Table "posttable" is created');
     }
 });
 

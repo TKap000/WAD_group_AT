@@ -3,7 +3,8 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import MainPage from '../views/MainPage.vue';
 import auth from "../auth";
 import AllPosts from "../views/AllPosts.vue";
-
+import APost from "../views/APost.vue";
+import AddPost from "../views/AddPost.vue";
 const routes = [
     {
       path: '/', // Base path
@@ -43,16 +44,31 @@ const routes = [
           import ( /* webpackChunkName: "about" */ "../views/ContactPage.vue"),
     },
     {
-      path: "/allposts",
+      path: "/api/Allposts",
       name: "allposts",
       component: () =>
           import ( /* webpackChunkName: "about" */ "../views/AllPosts.vue"),
     },
+    {
+      path: "/api/apost/:id",
+      name: "apost",
+      component: APost
+    },
+    {
+      path: "/api/addpost",
+      name: "addpost",
+      component: AddPost
+    },
+    {
+      path:"/api/catchAll(.*)",
+      name: "Allposts",
+      component: AllPosts
+    }
     
   ];
 
 const router = createRouter({
-  history: createWebHashHistory(), // Use hash-based history for SPA navigation
+  history: createWebHashHistory(process.env.BASE_URL), // Use hash-based history for SPA navigation
   routes,
 });
 
