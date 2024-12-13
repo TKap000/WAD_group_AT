@@ -208,6 +208,18 @@ app.delete('/api/posts/:id', async(req, res) => {
         console.error(err.message);
     }
 }); 
+
+// Delete all posts
+app.delete('/api/posts', async (req, res) => {
+    try {
+      await pool.query("DELETE FROM posttable"); // Deletes all rows from the posttable
+      res.status(200).json({ message: "All posts deleted successfully" });
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).json({ error: "Failed to delete all posts" });
+    }
+  });
+  
 app.get('/api/verify-posttable', async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM posttable");

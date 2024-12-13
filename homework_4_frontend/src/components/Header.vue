@@ -5,7 +5,7 @@
           <li class="nav-item"><router-link to="/main" class="nav-link">Main</router-link></li>
           <li class="nav-item"><router-link to="/signup" class="nav-link">Signup</router-link></li>
           <li class = "nav-item"><router-link to="/api/Allposts" class="nav-link">AllPosts</router-link></li>
-          <li class="nav-item"><router-link to="/api/addPost" class="nav-link">addpost</router-link></li>
+          <!-- <li class="nav-item"><router-link to="/api/addPost" class="nav-link">addpost</router-link></li> -->
         </ul>
       </nav>
     </header>

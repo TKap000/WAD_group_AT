@@ -1,22 +1,31 @@
+<!-- AllPosts.vue -->
 <template>
-  <div><Header /></div>
-  <div class="AllPosts">
-    <div id="post-list">
-    <h1>All Posts</h1>
-      <ul>
-        <div class="item" v-for="post in posts" :key="post.id">
-          <!-- / We are putting an anchor for each post, when we click on it, we will be directed to the specific post view (/apost/) /  -->
-          <a class="singlepost" :href="'/api/apost/' + post.id">
-            <span class="title"> <b>Title:</b> {{ post.title }} </span><br />
-            <span class="body"> <b>Body:</b> {{ post.body }} </span> <br />
-            <span class="url"> <b>Url:</b> {{ post.urllink }} </span> <br />
-          </a>
+  <div>
+    <Header />
+    <div class="AllPosts">
+      <div id="post-list">
+        <h1>All Posts</h1>
+        <ul>
+          <div class="item" v-for="post in posts" :key="post.id">
+            <!-- Use router-link for internal navigation -->
+            <router-link class="singlepost" :to="'/api/apost/' + post.id">
+              <span class="title"><b>Title:</b> {{ post.title }}</span><br />
+              <span class="body"><b>Body:</b> {{ post.body }}</span><br />
+              <span class="url"><b>Url:</b> {{ post.urllink }}</span><br />
+            </router-link>
+          </div>
+        </ul>
+        <!-- Add Post Button -->
+        <div class="button-container">
+          <router-link to="/api/addPost" class="add-post-link">Add New Post</router-link>
+          <button @click="deleteAllPosts" class="delete-all-posts-link">Delete All Posts</button>
         </div>
-      </ul>
+      </div>
     </div>
+    <Footer />
   </div>
-  <div><Footer /></div>
 </template>
+
 
 
 <script>
@@ -45,6 +54,22 @@ export default {
         .then((data) => (this.posts = data))
         .catch((err) => console.log(err.message));
     },
+    deleteAllPosts() {
+      // using Fetch - delete method - deletes all posts
+      fetch(`http://localhost:3000/api/posts/`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((response) => {
+          console.log(response.data);
+          // redirect to /allposts view
+          this.$router.push("/api/Allposts");
+          window.location.reload();
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
   },
   mounted() {
     // call fetchPosts() when this element (AllPosts) mounts 
@@ -70,6 +95,7 @@ a:hover {
   padding: 3px 5px;
   border-radius: 10px;
 }
+/* Styling for the posts list container */
 #post-list {
   background: #6e8b97;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
@@ -79,14 +105,46 @@ a:hover {
   width: 50%;
   border-radius: 20px;
 }
+
+/* Remove default list styling */
+/* Styling for the posts list container */
+#post-list {
+  background: #6e8b97;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+}
+
+/* Remove default list styling */
 #post-list ul {
   padding: 0;
 }
-#post-list li {
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Add New Post and Delete All Posts buttons styling */
+.add-post-link,
+.delete-all-posts-link {
   display: inline-block;
-  margin-right: 10px;
-  margin-top: 10px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  background-color: #0a7a8c;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-post-link:hover,
+.delete-all-posts-link:hover {
+  background-color: #095e73;
 }
 </style>
