@@ -4,6 +4,7 @@
         <ul class="nav-list">
           <li class="nav-item"><router-link to="/main" class="nav-link">Main</router-link></li>
           <li class="nav-item"><router-link to="/signup" class="nav-link">Signup</router-link></li>
+          <li class = "nav-item"><router-link to="/Allposts" class="nav-link">AllPosts</router-link></li>
         </ul>
       </nav>
     </header>

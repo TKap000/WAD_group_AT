@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 // import HomeView from '../views/HomeView.vue';
 import MainPage from '../views/MainPage.vue';
 import auth from "../auth";
+import AllPosts from "../views/AllPosts.vue";
 
 const routes = [
     {
@@ -41,6 +42,13 @@ const routes = [
       component: () =>
           import ( /* webpackChunkName: "about" */ "../views/ContactPage.vue"),
     },
+    {
+      path: "/allposts",
+      name: "allposts",
+      component: () =>
+          import ( /* webpackChunkName: "about" */ "../views/AllPosts.vue"),
+    },
+    
   ];
 
 const router = createRouter({
