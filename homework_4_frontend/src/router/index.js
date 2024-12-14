@@ -5,8 +5,8 @@ import auth from "../auth";
 import AllPosts from "../views/AllPosts.vue";
 import APost from "../views/APost.vue";
 import AddPost from "../views/AddPost.vue";
-import ContactPage
- from '../views/ContactPage.vue';
+import ContactPage from '../views/ContactPage.vue';
+
 const routes = [
     {
       path: '/api/Allposts', // Base path
@@ -22,10 +22,7 @@ const routes = [
             }
         }
     },
-    // {
-    //   path: '/main', // Additional route pointing to MainPage
-    //   redirect: '/', // Redirect to the base path
-    // },
+
     {
         path: '/signup', // Signup Page
         name: 'signup',
@@ -38,7 +35,7 @@ const routes = [
     },
     {
         path: '/contact', // Public Contact Page
-        name: 'contact',
+        name: 'ContactPage',
         component: () => import('../views/ContactPage.vue'), // Load ContactPage
     },
     {
