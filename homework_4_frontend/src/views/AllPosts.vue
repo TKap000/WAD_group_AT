@@ -2,6 +2,7 @@
 <template>
   <div>
     <Header />
+    <div><button type="button" @click="Logout">Log Out</button></div>
     <div class="AllPosts">
       <div id="post-list">
         <h1>All Posts</h1>
@@ -69,6 +70,24 @@ export default {
         .catch((e) => {
           console.log(e);
         });
+    },
+    Logout() {
+      console.log("HERE");
+      fetch("http://localhost:3000/auth/logout", {
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log('jwt removed');
+        //console.log('jwt removed:' + auth.authenticated());
+        this.$router.push("/login");
+
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error logout");
+      });
     },
   },
   mounted() {
