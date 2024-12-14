@@ -3,7 +3,18 @@
   <div>
     <Header />
     <div class="contact">
-      <h1>This is the contacts page, add content please.</h1>
+      <h1>This contacts page is meant for you</h1>
+      <p>Feel free to reach out to us at any time</p>
+      <p>Our email is:
+        <a href="mailto:">
+          blahblahblah@blah.bla
+        </a>
+      </p>
+      <p>Our phone number is:
+        <a href="tel:">
+          123-456-7890
+        </a>
+      </p>
     </div>
     
   </div>
