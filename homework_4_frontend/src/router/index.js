@@ -5,12 +5,14 @@ import auth from "../auth";
 import AllPosts from "../views/AllPosts.vue";
 import APost from "../views/APost.vue";
 import AddPost from "../views/AddPost.vue";
+import ContactPage
+ from '../views/ContactPage.vue';
 const routes = [
     {
-      path: '/', // Base path
-      name: 'main',
+      path: '/api/Allposts', // Base path
+      name: 'allposts',
       //component: () => import('../views/MainPage.vue'), // Load MainPage
-      component: MainPage,
+      component: AllPosts,
         beforeEnter: async(to, from, next) => {
             let authResult = await auth.authenticated();
             if (!authResult) {
@@ -20,50 +22,39 @@ const routes = [
             }
         }
     },
+    // {
+    //   path: '/main', // Additional route pointing to MainPage
+    //   redirect: '/', // Redirect to the base path
+    // },
     {
-      path: '/main', // Additional route pointing to MainPage
-      redirect: '/', // Redirect to the base path
+        path: '/signup', // Signup Page
+        name: 'signup',
+        component: () => import(/* webpackChunkName: "signup" */ '../views/SignupPage.vue'), // Lazy-loaded Signup page
     },
     {
-      path: '/signup',
-      name: 'signup',
-      component: () => import(/* webpackChunkName: "signup" */ '../views/SignupPage.vue'), // Lazy-loaded Signup page
+        path: '/login', // Login Page
+        name: 'login',
+        component: () => import(/* webpackChunkName: "login" */ '../views/LoginPage.vue'),
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import(/* webpackChunkName: "login" */ '../views/LoginPage.vue'),
+        path: '/contact', // Public Contact Page
+        name: 'contact',
+        component: () => import('../views/ContactPage.vue'), // Load ContactPage
     },
     {
-      path: "/contact",
-      name: "contact",
-      // route level code-splitting
-      // this generates a separate chunk (contact.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-          import ( /* webpackChunkName: "about" */ "../views/ContactPage.vue"),
+        path: '/api/apost/:id', // View a single post
+        name: 'apost',
+        component: APost,
     },
     {
-      path: "/api/Allposts",
-      name: "allposts",
-      component: () =>
-          import ( /* webpackChunkName: "about" */ "../views/AllPosts.vue"),
+        path: '/api/addpost', // Add a new post
+        name: 'addpost',
+        component: AddPost,
     },
     {
-      path: "/api/apost/:id",
-      name: "apost",
-      component: APost
+        path: '/:pathMatch(.*)*', // Catch-All Route
+        redirect: '/api/Allposts', // Redirect to Home
     },
-    {
-      path: "/api/addpost",
-      name: "addpost",
-      component: AddPost
-    },
-    {
-      path:"/api/catchAll(.*)",
-      name: "Allposts",
-      component: AllPosts
-    }
     
   ];
 
