@@ -131,24 +131,10 @@ a:hover {
   margin-bottom: 30px;
   padding: 10px 20px;
   margin: auto;
-  width: 100%;
+  width: auto;
   border-radius: 20px;
   align-items: center;
 }
-
-/* Remove default list styling */
-/* Styling for the posts list container */
-/*
-#post-list {
-  background: #6e8b97;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  padding: 10px 20px;
-  margin: auto;
-  width: 50%;
-  border-radius: 20px;
-}
-  */
 
 /*screen adjust*/
 @media (max-width: 700px) {
@@ -188,6 +174,10 @@ a:hover {
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
+}
+
+.delete-all-posts-link {
+  margin-left: 20px;
 }
 
 .add-post-link:hover,
