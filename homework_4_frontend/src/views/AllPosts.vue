@@ -3,6 +3,11 @@
   <div>
     <Header />
     <div><button type="button" @click="Logout">Log Out</button></div>
+    
+    <div class="content-wrapper">
+      <aside class="sidebar-left">
+      </aside>
+    
     <div class="AllPosts">
       <div id="post-list">
         <h1>All Posts</h1>
@@ -22,6 +27,11 @@
           <button @click="deleteAllPosts" class="delete-all-posts-link">Delete All Posts</button>
         </div>
       </div>
+    </div>
+
+    <aside class="sidebar-right">
+
+      </aside>
     </div>
     <Footer />
   </div>
@@ -121,12 +131,14 @@ a:hover {
   margin-bottom: 30px;
   padding: 10px 20px;
   margin: auto;
-  width: 50%;
+  width: 100%;
   border-radius: 20px;
+  align-items: center;
 }
 
 /* Remove default list styling */
 /* Styling for the posts list container */
+/*
 #post-list {
   background: #6e8b97;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
@@ -136,6 +148,22 @@ a:hover {
   width: 50%;
   border-radius: 20px;
 }
+  */
+
+/*screen adjust*/
+@media (max-width: 700px) {
+  #post-list {
+  background: #6e8b97;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  align-items: center;
+}
+}
+
 
 /* Remove default list styling */
 #post-list ul {
