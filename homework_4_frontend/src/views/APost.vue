@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <Header />
+
   <div class="A Post">
     <div id="form">
       <h3>A Post</h3>
@@ -14,13 +17,24 @@
       <button @click="deletePost" class="deletePost">Delete Post</button>
     </div>
   </div>
+
+  <br>
+  <Footer />
+</div>
 </template>
 
 
 <script>
 
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
 export default {
   name: "APost",
+  components: {
+    Header,
+    Footer,
+  },
   data() {
     return {
       post: {
@@ -126,4 +140,5 @@ button {
   color: white;
   border-radius: 20px;
 }
+
 </style>
