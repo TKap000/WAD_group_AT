@@ -198,6 +198,16 @@ a {
   cursor: pointer;
 }
 
+/*screen adjust*/
+@media (max-width: 500px) {
+  .add-post-link,
+  .delete-all-posts-link {
+    width: 100px;
+    height: 70px;
+    font-size: 10px;
+  }
+}
+
 .delete-all-posts-link {
   margin-left: 20px;
 }
