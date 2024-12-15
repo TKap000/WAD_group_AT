@@ -9,13 +9,49 @@
           <!-- <li class="nav-item"><router-link to="/api/addPost" class="nav-link">addpost</router-link></li> -->
           <li class="nav-item"><router-link to="/contact" class="nav-link">ContactPage</router-link></li>
         </ul>
+        <div v-if="showElement"><button class="logout-button" type="button" @click="Logout">Log Out</button></div>
       </nav>
+      
     </header>
   </template>
   
   <script>
+  import auth from "../auth";
+
   export default {
     name: "Header",
+
+    data() {
+      return {
+        showElement: false,
+      };
+    },
+
+    async mounted() {
+      // Await the result of the asynchronous function
+      this.showElement = await auth.authenticated();
+    },
+
+    methods:{
+    
+      Logout() {
+        fetch("http://localhost:3000/auth/logout", {
+            credentials: 'include', //  Don't forget to specify this if you need cookies
+        })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          console.log('jwt removed');
+          this.$router.push("/login");
+
+        })
+        .catch((e) => {
+          console.log(e);
+          console.log("error logout");
+        });
+
+      },
+    }
   };
   </script>
   
@@ -57,6 +93,22 @@
   .nav-link:hover {
     color: #0fb80c;
   }
-  
+
+  .logout-button{
+  position: absolute;
+  left: 90%;
+  width: 80px;
+  height: 30px;
+  background-color: rgb(180, 241, 241);
+  border-radius: 5px;
+  border-color: #0fb80c;
+  border-width: 2px;
+  box-shadow: none;
+}
+
+.logout-button:hover{
+  background-color: rgb(112, 209, 209);
+}
+
   </style>
   

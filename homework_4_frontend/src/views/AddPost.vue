@@ -37,15 +37,28 @@ export default {
         title: "",
         body: "",
         urllink: "",
+        datetime: "",
       },
     };
   },
   methods: {
     addPost() {
+      var currentdate = new Date(); 
+      var h = (currentdate.getHours()).toString().padStart(2, "0");
+      var m = (currentdate.getMinutes()).toString().padStart(2, "0");
+      var s = (currentdate.getSeconds()).toString().padStart(2, "0");
+      var datetime = currentdate.getDate() + "."
+                + (currentdate.getMonth()+1)  + "." 
+                + currentdate.getFullYear() + " @ "  
+                + h + ":"  
+                + m + ":" 
+                + s;
+
       var data = {
         title: this.post.title,
         body: this.post.body,
         urllink: this.post.urllink,
+        datetime: datetime,
       };
       // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
       fetch("http://localhost:3000/api/posts", {
@@ -105,9 +118,12 @@ button {
   border: 0;
   padding: 10px 20px;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: white;
   border-radius: 20px;
   align-items: center;
   text-align: center;
 }
 </style>
+

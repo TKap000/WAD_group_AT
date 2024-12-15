@@ -123,12 +123,15 @@ button {
   font-weight: bold;
 }
 
-.is-success {
-  color: #96CA2D;
-  /* visibility: hidden; */
+button{
+background-color: rgb(180, 241, 241);
+border-radius: 5px;
+border-color: #0fb80c;
+border-width: 2px;
+box-shadow: none;
 }
 
-.is-error {
-  color: #BA3637;
+button:hover{
+background-color: rgb(112, 209, 209);
 }
 </style>

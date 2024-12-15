@@ -35,7 +35,8 @@ const posttable = `
 	    "id" SERIAL PRIMARY KEY,         
 	    "title" VARCHAR(200) NOT NULL,
 	    "body" VARCHAR(200) NOT NULL,
-        "urllink" VARCHAR(200)  
+        "urllink" VARCHAR(200),  
+        "datetime" VARCHAR(200)
     );`;
 
 execute(createTblQuery).then(result => {

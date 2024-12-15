@@ -203,4 +203,17 @@ button {
 .is-error {
   color: #BA3637;
 }
+
+button{
+background-color: rgb(180, 241, 241);
+border-radius: 5px;
+border-color: #0fb80c;
+border-width: 2px;
+box-shadow: none;
+}
+
+button:hover{
+background-color: rgb(112, 209, 209);
+}
 </style>
+

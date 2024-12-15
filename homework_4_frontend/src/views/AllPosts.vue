@@ -2,7 +2,6 @@
 <template>
   <div>
     <Header />
-    <div><button type="button" @click="Logout">Log Out</button></div>
     
     <div class="content-wrapper">
       <aside class="sidebar-left">
@@ -15,9 +14,14 @@
           <div class="item" v-for="post in posts" :key="post.id">
             <!-- Use router-link for internal navigation -->
             <router-link class="singlepost" :to="'/api/apost/' + post.id">
-              <span class="title"><b>Title:</b> {{ post.title }}</span><br />
+              <div class="post-container">
+              <span class="datetime"> {{ post.datetime }}</span><br />
+              <br>
+              <span class="title"><b>Title:</b> {{ post.title }}</span><br />              
               <span class="body"><b>Body:</b> {{ post.body }}</span><br />
               <span class="url"><b>Url:</b> {{ post.urllink }}</span><br />
+              <br>
+              </div>
             </router-link>
           </div>
         </ul>
@@ -43,6 +47,7 @@
 
 import Header from "@/components/Header.vue";
 import Login from "@/components/Login.vue";
+import auth from "@/auth";
 import Footer from "@/components/Footer.vue";
 export default {
   name: "AllPosts",
@@ -82,7 +87,6 @@ export default {
         });
     },
     Logout() {
-      console.log("HERE");
       fetch("http://localhost:3000/auth/logout", {
           credentials: 'include', //  Don't forget to specify this if you need cookies
       })
@@ -90,7 +94,7 @@ export default {
       .then((data) => {
         console.log(data);
         console.log('jwt removed');
-        //console.log('jwt removed:' + auth.authenticated());
+        console.log('jwt removed:' + auth.authenticated());
         this.$router.push("/login");
 
       })
@@ -115,23 +119,41 @@ h1 {
 a {
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+.AllPosts{
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  align-items: center;
+  
+}
+.post-container:hover {
+  /*text-decoration: underline;*/
+  background-color: rgb(118, 190, 150);
+}
+.datetime{
+  position:sticky;
+  right: 90%;
 }
 .item {
   background: rgb(189, 212, 199);
   margin-bottom: 5px;
   padding: 3px 5px;
   border-radius: 10px;
+  width: auto;
+  align-self: center;
 }
+
 /* Styling for the posts list container */
+
 #post-list {
   background: #6e8b97;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
   padding: 10px 20px;
   margin: auto;
-  width: auto;
+  width: 80%;
   border-radius: 20px;
   align-items: center;
 }
@@ -144,7 +166,7 @@ a:hover {
   margin-bottom: 30px;
   padding: 10px 20px;
   margin: auto;
-  width: 50%;
+  width: 80%;
   border-radius: 20px;
   align-items: center;
 }
@@ -184,4 +206,5 @@ a:hover {
 .delete-all-posts-link:hover {
   background-color: #095e73;
 }
+
 </style>

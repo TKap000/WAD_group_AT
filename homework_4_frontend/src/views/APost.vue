@@ -18,6 +18,7 @@
 
 
 <script>
+
 export default {
   name: "APost",
   data() {
@@ -27,6 +28,7 @@ export default {
         title: "",
         body: "",
         urllink: "",
+        datetime: "",
       },
     };
   },
@@ -118,6 +120,8 @@ button {
   background: rgb(8, 110, 110);
   border: 0;
   padding: 10px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 20px;
   color: white;
   border-radius: 20px;
