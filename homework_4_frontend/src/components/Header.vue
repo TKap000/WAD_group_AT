@@ -118,7 +118,7 @@
 
 @media (max-width: 700px) {
   .logout-button-div {
-    top: 15%;
+    top: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

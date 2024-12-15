@@ -27,7 +27,10 @@
         </ul>
         <!-- Add Post Button -->
         <div class="button-container">
+          <!--
           <router-link to="/api/addPost" class="add-post-link">Add New Post</router-link>
+        -->
+          <button class="add-post-link"><router-link to="/api/addPost">Add New Post</router-link></button>
           <button @click="deleteAllPosts" class="delete-all-posts-link">Delete All Posts</button>
         </div>
       </div>
@@ -204,6 +207,10 @@ a {
   .delete-all-posts-link {
     width: 100px;
     height: 70px;
+    font-size: 10px;
+  }
+
+  .post-container {
     font-size: 10px;
   }
 }
