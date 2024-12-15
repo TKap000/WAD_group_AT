@@ -9,7 +9,7 @@
           <!-- <li class="nav-item"><router-link to="/api/addPost" class="nav-link">addpost</router-link></li> -->
           <li class="nav-item"><router-link to="/contact" class="nav-link">ContactPage</router-link></li>
         </ul>
-        <div v-if="showElement"><button class="logout-button" type="button" @click="Logout">Log Out</button></div>
+        <div v-if="showElement" class="logout-button-div"><button class="logout-button" type="button" @click="Logout">Log Out</button></div>
       </nav>
       
     </header>
@@ -94,8 +94,13 @@
     color: #0fb80c;
   }
 
+  .logout-button-div{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+  }
+
   .logout-button{
-  position: relative;
   left: 90%;
   width: 80px;
   height: 30px;
@@ -109,6 +114,21 @@
 
 .logout-button:hover{
   background-color: rgb(112, 209, 209);
+}
+
+@media (max-width: 700px) {
+  .logout-button-div {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logout-button {
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+  }
 }
 
   </style>
