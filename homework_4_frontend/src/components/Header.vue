@@ -95,7 +95,7 @@
   }
 
   .logout-button{
-  position: absolute;
+  position: relative;
   left: 90%;
   width: 80px;
   height: 30px;
@@ -104,6 +104,7 @@
   border-color: #0fb80c;
   border-width: 2px;
   box-shadow: none;
+  margin-right: 20px;
 }
 
 .logout-button:hover{
