@@ -42,11 +42,27 @@ const routes = [
         path: '/api/apost/:id', // View a single post
         name: 'apost',
         component: APost,
+        beforeEnter: async(to, from, next) => {
+            let authResult = await auth.authenticated();
+            if (!authResult) {
+                next('/login')
+            } else {
+                next();
+            }
+        }
     },
     {
         path: '/api/addpost', // Add a new post
         name: 'addpost',
         component: AddPost,
+        beforeEnter: async(to, from, next) => {
+            let authResult = await auth.authenticated();
+            if (!authResult) {
+                next('/login')
+            } else {
+                next();
+            }
+        }
     },
     {
         path: '/:pathMatch(.*)*', // Catch-All Route
